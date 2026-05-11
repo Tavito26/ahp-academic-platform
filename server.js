@@ -10,7 +10,7 @@ if (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.startsWith('replac
   const { randomBytes } = require('crypto');
   const secret = randomBytes(48).toString('hex');
   console.warn('No valid SESSION_SECRET found, generated one:', secret);
-  process.env.SESSION_SECRET = secret;
+  process.env.SESSION_SECRET = secret
 }
 
 const db = require('./db');
